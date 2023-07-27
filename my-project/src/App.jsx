@@ -44,7 +44,6 @@ function App() {
             )}
           </div>
 
-          {/* Menu para telas maiores */}
           <nav
             className={`md:flex md:space-x-5 ${isOpen ? "block" : "hidden"}`}
           >
@@ -72,7 +71,7 @@ function App() {
           </nav>
         </header>
 
-        <div className="flex items-center justify-center h-screen">
+        <div className="flex flex-col items-center justify-center h-screen">
           <div className="md:w-1/2 bg-slate-800 bg-opacity-70 p-8 rounded-lg shadow-2xl text-center transform hover:scale-105 transition-transform">
             <h2 className="text-4xl md:text-6xl font-bold mb-8 text-white">
               Renove sua casa com estofados de qualidade!
@@ -86,6 +85,12 @@ function App() {
               Tenha o conforto e a sofisticação que você merece.
             </p>
           </div>
+          <a
+            href="#contatos"
+            className="bg-blue-500 text-white text-lg font-sans font-semibold mt-4 px-6 py-3 hover:bg-blue-600 transition-colors"
+          >
+            Fale Comigo
+          </a>
         </div>
       </main>
 
@@ -129,55 +134,68 @@ function App() {
         className="bg-[url('/src/assets/test4.jpg')] py-16 bg-auto"
       >
         <div className="container mx-auto">
-          <h2 className="font-medium text-4xl mb-12 text-center tracking-wider">
+          <h2 className="font-medium text-4xl my-12 text-center text-gray-800 tracking-wide">
             Serviços:
           </h2>
           <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
             {/* Card 1 */}
             <div className="bg-white p-8 rounded-lg shadow-md flex flex-col items-center">
               <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mb-4">
-                <span className="text-white text-3xl">1</span>
+                <span>
+                  <FaToolbox className="inline-block text-xl text-white" />
+                </span>
               </div>
-              <h3 className="text-xl font-bold mb-4">Serviço 1</h3>
+              <h3 className="text-xl font-mono font-semibold mb-4">Limpeza</h3>
               <p className="text-gray-700 text-center">
-                Descrição do Serviço 1. Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit.
+                Limpeza profissional de estofados, tapetes, carpetes, colchões,
+                persianas, carrinho de bebê, veículos.
               </p>
             </div>
 
             {/* Card 2 */}
             <div className="bg-white p-8 rounded-lg shadow-md flex flex-col items-center">
               <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mb-4">
-                <span className="text-white text-3xl">2</span>
+                <span>
+                  <FaToolbox className="inline-block text-xl text-white" />
+                </span>
               </div>
-              <h3 className="text-xl font-bold mb-4">Serviço 2</h3>
+              <h3 className="text-xl  font-mono font-semibold  mb-4">
+                Hipermeabilização
+              </h3>
               <p className="text-gray-700 text-center">
-                Descrição do Serviço 2. Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit.
+                Proteção contra umidade e infiltrações em estofados e colchões.
               </p>
             </div>
 
             {/* Card 3 */}
             <div className="bg-white p-8 rounded-lg shadow-md flex flex-col items-center">
               <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mb-4">
-                <span className="text-white text-3xl">3</span>
+                <span>
+                  <FaToolbox className="inline-block text-xl text-white" />
+                </span>
               </div>
-              <h3 className="text-xl font-bold mb-4">Serviço 3</h3>
+              <h3 className="text-xl font-mono font-semibold mb-4">
+                Lavagem a Seco
+              </h3>
               <p className="text-gray-700 text-center">
-                Descrição do Serviço 3. Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit.
+                Lavagem profissional de estofados e colchões a seco, sem uso de
+                água.
               </p>
             </div>
 
             {/* Card 4 */}
             <div className="bg-white p-8 rounded-lg shadow-md flex flex-col items-center">
               <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mb-4">
-                <span className="text-white text-3xl">4</span>
+                <span>
+                  <FaToolbox className="inline-block text-xl text-white" />
+                </span>
               </div>
-              <h3 className="text-xl font-bold mb-4">Serviço 4</h3>
+              <h3 className="text-xl mb-4 font-mono font-semibold">
+                Higienização
+              </h3>
               <p className="text-gray-700 text-center">
-                Descrição do Serviço 4. Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit.
+                Higienização completa de estofados, eliminando ácaros e
+                bactérias.
               </p>
             </div>
           </div>
@@ -185,38 +203,38 @@ function App() {
       </section>
 
       <section id="contatos" className="bg-gray-100 py-16">
-        <div className="container mx-auto ">
-          <h2 className="text-4xl font-medium text-center tracking-wide py-16">
+        <div className="container mx-auto">
+          <h2 className="text-4xl font-medium text-center text-gray-800 tracking-wide pb-14">
             Contatos:
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 px-6 md:px-0">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 px-6 md:px-8">
             {/* Contato 1 */}
-            <div className="flex flex-col items-center">
-              <FaWhatsapp size={34} className="text-blue-500 mb-4" />
-              <p className="text-gray-700 text-center text-lg whitespace-nowrap">
-                +55(11)1234-5678
+            <div className="flex flex-col items-center border border-gray-300 rounded-lg p-6">
+              <FaWhatsapp size={40} className="text-blue-500 mb-4" />
+              <p className="text-gray-700 text-center text-lg">
+                +55 (11) 1234-5678
               </p>
             </div>
 
             {/* Contato 2 */}
-            <div className="flex flex-col items-center">
-              <FaInstagram size={34} className="text-pink-500 mb-4" />
+            <div className="flex flex-col items-center border border-gray-300 rounded-lg p-6">
+              <FaInstagram size={40} className="text-pink-500 mb-4" />
               <p className="text-gray-700 text-center text-lg">
                 @minha_empresa
               </p>
             </div>
 
             {/* Contato 3 */}
-            <div className="flex flex-col items-center">
-              <IoMdPhonePortrait size={34} className="text-green-500 mb-4" />
-              <p className="text-gray-700 text-center text-lg whitespace-nowrap">
+            <div className="flex flex-col items-center border border-gray-300 rounded-lg p-6">
+              <IoMdPhonePortrait size={40} className="text-green-500 mb-4" />
+              <p className="text-gray-700 text-center text-lg">
                 +55 (11) 9876-5432
               </p>
             </div>
 
             {/* Contato 4 */}
-            <div className="flex flex-col items-center">
-              <IoMdMail size={34} className="text-red-500 mb-4" />
+            <div className="flex flex-col items-center border border-gray-300 rounded-lg p-6">
+              <IoMdMail size={40} className="text-red-500 mb-4" />
               <p className="text-gray-700 text-center text-lg">
                 contato@minhaempresa.com
               </p>
