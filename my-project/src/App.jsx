@@ -90,6 +90,7 @@ function App() {
             className="bg-blue-500 text-white text-lg font-sans font-semibold mt-4 px-6 py-3 hover:bg-blue-600 transition-colors"
           >
             Fale Comigo
+            
           </a>
         </div>
       </main>
@@ -134,7 +135,7 @@ function App() {
         className="bg-[url('/src/assets/test4.jpg')] py-16 bg-auto"
       >
         <div className="container mx-auto">
-          <h2 className="font-medium text-4xl my-12 text-center text-gray-800 tracking-wide">
+          <h2 className="font-medium text-4xl my-14 text-center text-gray-800 tracking-wide">
             Serviços:
           </h2>
           <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
@@ -202,17 +203,98 @@ function App() {
         </div>
       </section>
 
+      <section id="galeria" className="py-16 bg-gray-100">
+  <div className="container mx-auto">
+    <h2 className="font-medium text-4xl mb-12 text-center text-gray-800 tracking-wide">
+      Galeria:
+    </h2>
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      {/* Imagem 1 - Antes */}
+      <div className="relative rounded-lg overflow-hidden">
+        <img
+          src="/src/assets/test1.jpg"
+          alt="Imagem Antes da Limpeza"
+          className="w-full h-72 object-cover rounded-lg shadow-md transform transition-transform duration-300 scale-100 hover:scale-105"
+        />
+        <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black bg-opacity-50 rounded-lg">
+          <span className="text-white text-lg font-bold">Antes</span>
+        </div>
+      </div>
+
+      {/* Imagem 1 - Depois */}
+      <div className="relative rounded-lg overflow-hidden">
+        <img
+          src="/src/assets/test2.jpg"
+          alt="Imagem Depois da Limpeza"
+          className="w-full h-72 object-cover rounded-lg shadow-2xl transform transition-transform duration-300 scale-100 hover:scale-105"
+        />
+        <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black bg-opacity-30 rounded-lg">
+          <span className="text-white text-lg font-bold">Depois</span>
+        </div>
+      </div>
+
+      {/* Imagem 2 - Antes */}
+      <div className="relative rounded-lg overflow-hidden">
+        <img
+          src="/src/assets/test3.jpg"
+          alt="Imagem Antes da Limpeza"
+          className="w-full h-72 object-cover rounded-lg shadow-2xl transform transition-transform duration-300 scale-100 hover:scale-105"
+        />
+        <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black bg-opacity-30 rounded-lg">
+          <span className="text-white text-lg font-bold">Antes</span>
+        </div>
+      </div>
+
+      {/* Imagem 2 - Depois */}
+      <div className="relative rounded-lg overflow-hidden">
+        <img
+          src="/src/assets/test4.jpg"
+          alt="Imagem Depois da Limpeza"
+          className="w-full h-72 object-cover rounded-lg shadow-2xltransform transition-transform duration-300 scale-100 hover:scale-105"
+        />
+        <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black bg-opacity-30 rounded-lg">
+          <span className="text-white text-lg font-bold">Depois</span>
+        </div>
+      </div>
+
+      {/* Imagem 3 - Antes */}
+      <div className="relative rounded-lg overflow-hidden">
+        <img
+          src="/src/assets/test5.jpg"
+          alt="Imagem Antes da Limpeza"
+          className="w-full h-72 object-cover rounded-lg shadow-2xl transform transition-transform duration-300 scale-100 hover:scale-105"
+        />
+        <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black bg-opacity-30 rounded-lg">
+          <span className="text-white text-lg font-bold">Antes</span>
+        </div>
+      </div>
+
+      {/* Imagem 3 - Depois */}
+      <div className="relative rounded-lg overflow-hidden">
+        <img
+          src="/src/assets/test6.jpg"
+          alt="Imagem Depois da Limpeza"
+          className="w-full h-72 object-cover rounded-lg shadow-2xl transform transition-transform duration-300 scale-100 hover:scale-105"
+        />
+        <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black bg-opacity-30 rounded-lg">
+          <span className="text-white text-lg font-bold">Depois</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
       <section id="contatos" className="bg-gray-100 py-16">
         <div className="container mx-auto">
-          <h2 className="text-4xl font-medium text-center text-gray-800 tracking-wide pb-14">
+          {/* <h2 className="text-4xl font-medium text-center text-gray-800 tracking-wide pb-14 my-12">
             Contatos:
-          </h2>
+          </h2> */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 px-6 md:px-8">
             {/* Contato 1 */}
             <div className="flex flex-col items-center border border-gray-300 rounded-lg p-6">
               <FaWhatsapp size={40} className="text-blue-500 mb-4" />
               <p className="text-gray-700 text-center text-lg">
-                +55 (11) 1234-5678
+                +55 (75) 99713-0700
               </p>
             </div>
 
@@ -220,7 +302,7 @@ function App() {
             <div className="flex flex-col items-center border border-gray-300 rounded-lg p-6">
               <FaInstagram size={40} className="text-pink-500 mb-4" />
               <p className="text-gray-700 text-center text-lg">
-                @minha_empresa
+                @motta_clean
               </p>
             </div>
 
@@ -228,7 +310,7 @@ function App() {
             <div className="flex flex-col items-center border border-gray-300 rounded-lg p-6">
               <IoMdPhonePortrait size={40} className="text-green-500 mb-4" />
               <p className="text-gray-700 text-center text-lg">
-                +55 (11) 9876-5432
+                +55 (75) 99713-0700
               </p>
             </div>
 
@@ -243,6 +325,7 @@ function App() {
         </div>
       </section>
 
+
       <footer className="bg-slate-700 py-14 px-4 text-white text-center">
         <div className="container mx-auto flex flex-col md:flex-row md:justify-between">
           <div className="md:w-1/2">
@@ -253,33 +336,33 @@ function App() {
           <div className="md:w-1/2 mt-4 md:mt-0">
             <div className="flex justify-center space-x-6">
               <a
-                href="https://api.whatsapp.com/send?phone=5511987654321"
+                href="https://api.whatsapp.com/send?phone=5575997130700" 
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FaWhatsapp
-                  size={24}
+                  size={26}
                   className="text-white hover:text-gray-300"
                 />
               </a>
 
               <a
-                href="https://www.instagram.com/minha_empresa/"
+                href="https://www.instagram.com/motta_clean/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FaInstagram
-                  size={24}
+                  size={26}
                   className="text-white hover:text-gray-300"
                 />
               </a>
 
               <a
-                href="tel:+5511987654321"
+                href="tel:+5575997130700"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaPhone size={24} className="text-white hover:text-gray-300" />
+                <FaPhone size={26} className="text-white hover:text-gray-300" />
               </a>
 
               <a
@@ -288,7 +371,7 @@ function App() {
                 rel="noopener noreferrer"
               >
                 <FaEnvelope
-                  size={24}
+                  size={26}
                   className="text-white hover:text-gray-300"
                 />
               </a>
