@@ -6,6 +6,7 @@ import { IoMdPhonePortrait, IoMdMail } from 'react-icons/io';
 function App() {
   return (
     <>
+    <main id="home" className="bg-[url('/src/assets/test5.jpg')] bg-cover">
      <header className="bg-slate-700 py-2 px-8 md:flex md:justify-between md:items-center">
         <div className="flex items-center space-x-2 md:space-x-5">
           <img src={logo} alt="logo" className="w-12 h-12 rounded-full" />
@@ -14,19 +15,30 @@ function App() {
           </div>
         </div>
         <nav className="hidden md:flex md:space-x-5">
-          <a href="#home" className="text-white text-lg hover:text-gray-200">
-            Home
-          </a>
-          <a href="#servicos" className="text-white text-lg hover:text-gray-200">
-            Serviços
-          </a>
-          <a href="#contatos" className="text-white text-lg hover:text-gray-200">
-            Contatos
-          </a>
+        <a
+    href="#home"
+    className="text-white text-lg group relative focus:text-gray-200"
+  >
+    Home
+    <div className="absolute h-0.5 w-full bg-gray-200 left-0 bottom-0 transition-all duration-300 transform scale-x-0 group-hover:scale-x-100"></div>
+  </a>
+  <a
+    href="#servicos"
+    className="text-white text-lg group relative focus:text-gray-200"
+  >
+    Serviços
+    <div className="absolute h-0.5 w-full bg-gray-200 left-0 bottom-0 transition-all duration-300 transform scale-x-0 group-hover:scale-x-100"></div>
+  </a>
+  <a
+    href="#contatos"
+    className="text-white text-lg group relative focus:text-gray-200"
+  >
+    Contatos
+    <div className="absolute h-0.5 w-full bg-gray-200 left-0 bottom-0 transition-all duration-300 transform scale-x-0 group-hover:scale-x-100"></div>
+  </a>
         </nav>
       </header>
-      
-      <main id="home" className="bg-[url('/src/assets/test5.jpg')] py-8 bg-cover">
+    
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row items-center md:space-x-8 h-screen">
             <div className="md:w-1/2">
@@ -45,7 +57,8 @@ function App() {
                 nossos empresários prezam pela excelência no trabalho e garantem
                 a qualidade dos produtos e o bem-estar das pessoas.
               </p>
-              <p className="text-lg">
+              <br></br>
+              <p className="text-xl">
                 Nossos estofados são feitos com madeira 100% reflorestada,
                 demonstrando nosso compromisso com o meio ambiente. Não perca
                 mais tempo, confie na CEMARA Estofados e experimente o melhor em
@@ -149,7 +162,7 @@ function App() {
           {/* Ícone do WhatsApp */}
           <div className="flex flex-col items-center">
             <FaWhatsapp size={34} className="text-blue-500 mb-4" />
-            <p className="text-gray-700 text-center text-xl">+55 (11) 1234-5678</p>
+            <p className="text-gray-700 text-center text-xl whitespace-nowrap">+55 (11) 1234-5678</p>
           </div>
 
           {/* Ícone do Instagram */}
@@ -161,7 +174,7 @@ function App() {
           {/* Ícone do Telefone */}
           <div className="flex flex-col items-center">
             <IoMdPhonePortrait size={34} className="text-green-500 mb-4" />
-            <p className="text-gray-700 text-center text-xl">+55 (11) 9876-5432</p>
+            <p className="text-gray-700 text-center text-xl whitespace-nowrap">+55 (11) 9876-5432</p>
           </div>
 
           {/* Ícone do E-mail */}
