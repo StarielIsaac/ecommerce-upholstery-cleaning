@@ -6,70 +6,72 @@ import { IoMdPhonePortrait, IoMdMail } from "react-icons/io";
 function App() {
   return (
     <>
-      <main id="home" className="bg-[url('/src/assets/test5.jpg')] bg-cover">
-        <header className="bg-slate-700 py-2 px-8 md:flex md:justify-between md:items-center">
-          <div className="flex items-center space-x-2 md:space-x-5">
-            <img src={logo} alt="logo" className="w-12 h-12 rounded-full" />
-            <div className="text-white font-light text-xl md:text-3xl tracking-widest">
-              Motta Clean
-            </div>
-          </div>
-          <nav className="hidden md:flex md:space-x-5">
-            <a
-              href="#home"
-              className="text-white text-lg group relative focus:text-gray-200"
-            >
-              Home
-              <div className="absolute h-0.5 w-full bg-gray-200 left-0 bottom-0 transition-all duration-300 transform scale-x-0 group-hover:scale-x-100"></div>
-            </a>
-            <a
-              href="#servicos"
-              className="text-white text-lg group relative focus:text-gray-200"
-            >
-              Serviços
-              <div className="absolute h-0.5 w-full bg-gray-200 left-0 bottom-0 transition-all duration-300 transform scale-x-0 group-hover:scale-x-100"></div>
-            </a>
-            <a
-              href="#contatos"
-              className="text-white text-lg group relative focus:text-gray-200"
-            >
-              Contatos
-              <div className="absolute h-0.5 w-full bg-gray-200 left-0 bottom-0 transition-all duration-300 transform scale-x-0 group-hover:scale-x-100"></div>
-            </a>
-          </nav>
-        </header>
+      <main
+  id="home"
+  className="bg-[url('/src/assets/test5.jpg')] bg-cover bg-center"
+>
+  <header className="bg-slate-700 py-2 px-4 md:px-8 flex justify-between items-center">
+    <div className="flex items-center space-x-2 md:space-x-5">
+      <img src={logo} alt="logo" className="w-12 h-12 rounded-full" />
+      <div className="text-white font-light text-xl md:text-3xl tracking-widest">
+        Motta Clean
+      </div>
+    </div>
+    <nav className="hidden md:flex md:space-x-5">
+      <a
+        href="#home"
+        className="text-white text-lg group relative focus:text-gray-200"
+      >
+        Home
+        <div className="absolute h-0.5 w-full bg-gray-200 left-0 bottom-0 transition-all duration-300 transform scale-x-0 group-hover:scale-x-100"></div>
+      </a>
+      <a
+        href="#servicos"
+        className="text-white text-lg group relative focus:text-gray-200"
+      >
+        Serviços
+        <div className="absolute h-0.5 w-full bg-gray-200 left-0 bottom-0 transition-all duration-300 transform scale-x-0 group-hover:scale-x-100"></div>
+      </a>
+      <a
+        href="#contatos"
+        className="text-white text-lg group relative focus:text-gray-200"
+      >
+        Contatos
+        <div className="absolute h-0.5 w-full bg-gray-200 left-0 bottom-0 transition-all duration-300 transform scale-x-0 group-hover:scale-x-100"></div>
+      </a>
+    </nav>
+  </header>
 
-        <div className="container mx-auto">
-          <div className="flex flex-col md:flex-row items-center md:space-x-8 h-screen">
-            <div className="md:w-1/2">
-              <h2 className="text-7xl font-bold mb-5 text-gray-800">
-                Renove sua casa com estofados de qualidade!
-              </h2>
-              <p className="text-gray-700 text-xl">
-                Oferecemos uma ampla variedade de estofados retráteis e
-                reclináveis de qualidade superior, projetados para atender às
-                suas necessidades.
-              </p>
-            </div>
-            <div className="md:w-1/2">
-              <p className="text-xl">
-                Adquira agora os estofados de alta qualidade da CEMARA Estofados
-                e sinta o conforto e a satisfação que nossos produtos oferecem.
-                Com mais de trinta anos de experiência no setor de estofamentos,
-                nossos empresários prezam pela excelência no trabalho e garantem
-                a qualidade dos produtos e o bem-estar das pessoas.
-              </p>
-              <br></br>
-              <p className="text-xl">
-                Nossos estofados são feitos com madeira 100% reflorestada,
-                demonstrando nosso compromisso com o meio ambiente. Não perca
-                mais tempo, confie na CEMARA Estofados e experimente o melhor em
-                design, conforto e qualidade.
-              </p>
-            </div>
-          </div>
-        </div>
-      </main>
+  <div className="container mx-auto px-4 md:px-8">
+    <div className="flex flex-col md:flex-row items-center md:space-x-8 h-screen">
+      <div className="md:w-1/2">
+        <h2 className="text-4xl md:text-7xl font-bold mb-5 text-gray-800">
+          Renove sua casa com estofados de qualidade!
+        </h2>
+        <p className="text-gray-700 text-xl">
+          Oferecemos uma ampla variedade de estofados retráteis e reclináveis
+          de qualidade superior, projetados para atender às suas necessidades.
+        </p>
+      </div>
+      <div className="md:w-1/2 mt-8 md:mt-0">
+        <p className="text-lg md:text-xl">
+          Adquira agora os estofados de alta qualidade da CEMARA Estofados e
+          sinta o conforto e a satisfação que nossos produtos oferecem. Com
+          mais de trinta anos de experiência no setor de estofamentos, nossos
+          empresários prezam pela excelência no trabalho e garantem a qualidade
+          dos produtos e o bem-estar das pessoas.
+        </p>
+        <br />
+        <p className="text-lg md:text-xl">
+          Nossos estofados são feitos com madeira 100% reflorestada,
+          demonstrando nosso compromisso com o meio ambiente. Não perca mais
+          tempo, confie na CEMARA Estofados e experimente o melhor em design,
+          conforto e qualidade.
+        </p>
+      </div>
+    </div>
+  </div>
+</main>
 
       <div className="flex flex-col md:flex-row md:space-x-14 mx-20 my-20">
         <div className="flex flex-col items-center">
