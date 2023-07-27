@@ -72,7 +72,7 @@ function App() {
         </header>
 
         <div className="flex flex-col items-center justify-center h-screen">
-          <div className="md:w-1/2 bg-slate-800 bg-opacity-70 p-8 rounded-lg shadow-2xl text-center transform hover:scale-105 transition-transform">
+          <div className="sm:rounded-none md:w-1/2 bg-slate-800 bg-opacity-70 p-8 md:rounded-lg shadow-2xl text-center transform md:hover:scale-105 transition-transform">
             <h2 className="text-4xl md:text-6xl font-bold mb-8 text-white">
               Renove sua casa com estofados de qualidade!
             </h2>
@@ -109,7 +109,7 @@ function App() {
           <p className="text-gray-700 text-center text-xl mb-7">
             Aqui, a alta qualidade é nossa prioridade! Cuidamos de tudo com
             muito carinho, desde a seleção das espumas e madeiras até a escolha
-            dos tecidos para o acabamento.
+            dos tecidos para o acabamento!
           </p>
         </div>
         <div className="flex flex-col items-center">
