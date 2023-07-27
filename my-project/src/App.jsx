@@ -108,7 +108,7 @@ function App() {
           <p className="text-gray-700 text-center text-xl mb-7">
             Aqui, a alta qualidade é nossa prioridade! Cuidamos de tudo com
             muito carinho, desde a seleção das espumas e madeiras até a escolha
-            dos tecidos para o acabamento.
+            dos tecidos para o acabamento!
           </p>
         </div>
         <div className="flex flex-col items-center">
