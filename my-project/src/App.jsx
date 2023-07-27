@@ -2,8 +2,16 @@ import logo from "../src/assets/logo.jpg";
 import { FaWhatsapp, FaInstagram, FaPhone, FaEnvelope } from "react-icons/fa";
 // import { FiPhone, FiMail } from 'react-icons/fi';
 import { IoMdPhonePortrait, IoMdMail } from "react-icons/io";
+import { FaBars, FaTimes, FaHome, FaToolbox } from "react-icons/fa";
+import { useState } from "react";
 
 function App() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleMenuToggle = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <>
       <main
@@ -13,37 +21,48 @@ function App() {
     backgroundImage: "url('/src/assets/test5.jpg')",
   }}
 >
-<header className="bg-slate-700 py-4 px-8 md:px-16 flex justify-between items-center">
-  <div className="flex items-center space-x-4">
-    <img src={logo} alt="logo" className="w-10 h-10 rounded-full" />
-    <div className="text-white font-bold text-xl md:text-2xl tracking-widest">
-      Motta Clean
-    </div>
-  </div>
-  <nav className="hidden md:flex md:space-x-4">
-    <a
-      href="#home"
-      className="text-white text-lg group relative focus:text-gray-200 transition-colors duration-300 hover:text-gray-200"
-    >
-      Home
-      <div className="absolute h-0.5 w-full bg-gray-200 left-0 bottom-0 transition-all duration-300 transform scale-x-0 group-hover:scale-x-100"></div>
-    </a>
-    <a
-      href="#servicos"
-      className="text-white text-lg group relative focus:text-gray-200 transition-colors duration-300 hover:text-gray-200"
-    >
-      Serviços
-      <div className="absolute h-0.5 w-full bg-gray-200 left-0 bottom-0 transition-all duration-300 transform scale-x-0 group-hover:scale-x-100"></div>
-    </a>
-    <a
-      href="#contatos"
-      className="text-white text-lg group relative focus:text-gray-200 transition-colors duration-300 hover:text-gray-200"
-    >
-      Contatos
-      <div className="absolute h-0.5 w-full bg-gray-200 left-0 bottom-0 transition-all duration-300 transform scale-x-0 group-hover:scale-x-100"></div>
-    </a>
-  </nav>
-</header>
+<header className="bg-slate-700 py-2 px-4 md:px-8 flex justify-between items-center">
+      <div className="flex items-center space-x-2 md:space-x-5">
+        <img src={logo} alt="logo" className="w-12 h-12 rounded-full" />
+        <div className="text-white font-light text-xl md:text-3xl tracking-widest">
+          Motta Clean
+        </div>
+      </div>
+
+      {/* Hambúrguer do menu para telas menores */}
+      <div className="md:hidden">
+        {isOpen ? (
+          <FaTimes onClick={handleMenuToggle} className="text-white text-2xl cursor-pointer" />
+        ) : (
+          <FaBars onClick={handleMenuToggle} className="text-white text-2xl cursor-pointer" />
+        )}
+      </div>
+
+      {/* Menu para telas maiores */}
+      <nav className={`md:flex md:space-x-5 ${isOpen ? 'block' : 'hidden'}`}>
+        <a
+          href="#home"
+          className="text-white text-lg group relative focus:text-gray-200"
+        >
+          <FaHome className="inline-block mr-2 text-xl" />
+          Home
+        </a>
+        <a
+          href="#servicos"
+          className="text-white text-lg group relative focus:text-gray-200"
+        >
+          <FaToolbox className="inline-block mr-2 text-xl" />
+          Serviços
+        </a>
+        <a
+          href="#contatos"
+          className="text-white text-lg group relative focus:text-gray-200"
+        >
+          <FaEnvelope className="inline-block mr-2 text-xl" />
+          Contatos
+        </a>
+      </nav>
+    </header>
   
   <div className="flex items-center justify-center h-screen">
   <div className="md:w-1/2 bg-slate-800 bg-opacity-70 p-8 rounded-lg shadow-2xl text-center transform hover:scale-105 transition-transform">
