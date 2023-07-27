@@ -190,11 +190,11 @@ function App() {
                 <FaWhatsapp size={24} className="text-white hover:text-gray-300" />
               </a>
 
-              <a
-                href="https://www.instagram.com/minha_empresa/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+                  <a
+                    href="https://www.instagram.com/minha_empresa/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                 <FaInstagram size={24} className="text-white hover:text-gray-300" />
               </a>
 
