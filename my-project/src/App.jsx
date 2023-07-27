@@ -8,7 +8,10 @@ function App() {
     <>
       <main
   id="home"
-  className="bg-[url('/src/assets/test5.jpg')] bg-cover bg-center"
+  className="relative bg-cover bg-bottom"
+  style={{
+    backgroundImage: "url('/src/assets/test5.jpg')",
+  }}
 >
   <header className="bg-slate-700 py-2 px-4 md:px-8 flex justify-between items-center">
     <div className="flex items-center space-x-2 md:space-x-5">
@@ -41,44 +44,30 @@ function App() {
       </a>
     </nav>
   </header>
-
-  <div className="container mx-auto px-4 md:px-8">
-    <div className="flex flex-col md:flex-row items-center md:space-x-8 h-screen">
-      <div className="md:w-1/2">
-        <h2 className="text-4xl md:text-7xl font-bold mb-5 text-gray-800">
-          Renove sua casa com estofados de qualidade!
-        </h2>
-        <p className="text-gray-700 text-xl">
-          Oferecemos uma ampla variedade de estofados retráteis e reclináveis
-          de qualidade superior, projetados para atender às suas necessidades.
-        </p>
-      </div>
-      <div className="md:w-1/2 mt-8 md:mt-0">
-        <p className="text-lg md:text-xl">
-          Adquira agora os estofados de alta qualidade da CEMARA Estofados e
-          sinta o conforto e a satisfação que nossos produtos oferecem. Com
-          mais de trinta anos de experiência no setor de estofamentos, nossos
-          empresários prezam pela excelência no trabalho e garantem a qualidade
-          dos produtos e o bem-estar das pessoas.
-        </p>
-        <br />
-        <p className="text-lg md:text-xl">
-          Nossos estofados são feitos com madeira 100% reflorestada,
-          demonstrando nosso compromisso com o meio ambiente. Não perca mais
-          tempo, confie na CEMARA Estofados e experimente o melhor em design,
-          conforto e qualidade.
-        </p>
-      </div>
-    </div>
+  
+  <div className="flex items-center justify-center h-screen">
+  <div className="md:w-1/2 bg-slate-800 bg-opacity-70 p-8 rounded-lg shadow-2xl text-center transform hover:scale-105 transition-transform">
+    <h2 className="text-4xl md:text-6xl font-bold mb-8 text-white">
+      Renove sua casa com estofados de qualidade!
+    </h2>
+    <p className="text-white text-lg md:text-xl">
+      Oferecemos uma ampla variedade de estofados retráteis e reclináveis de qualidade superior, projetados para atender às suas necessidades.
+    </p>
+    <p className="text-white text-lg md:text-xl mt-4">
+      Tenha o conforto e a sofisticação que você merece.
+    </p>
   </div>
+</div>
+
 </main>
 
       <div className="flex flex-col md:flex-row md:space-x-14 mx-20 my-20">
         <div className="flex flex-col items-center">
-          <h3 className="text-2xl font-bold mb-5">Sustentabilidade</h3>
+          <h3 className="text-2xl font-bold mb-5">Item 1</h3>
           <p className="text-gray-700 text-center text-xl mb-7">
-            Dispomos de uma grande capacidade de produção de energia elétrica
-            para garantir a produção sustentável de nossos estofados.
+            Aqui, a alta qualidade é nossa prioridade! Cuidamos de tudo com
+            muito carinho, desde a seleção das espumas e madeiras até a escolha
+            dos tecidos para o acabamento.
           </p>
         </div>
         <div className="flex flex-col items-center">
@@ -167,48 +156,48 @@ function App() {
         </div>
       </section>
 
-      <section id="contatos" className="bg-gray-100 py-12">
-        <div className="container mx-auto">
-          <h2 className="text-4xl font-light  mb-5 text-center tracking-widest">
-            Contatos:
-          </h2>
-          <div className="flex flex-col md:flex-row md:justify-center md:space-x-14 mx-20 my-20">
-            {/* Ícone do WhatsApp */}
-            <div className="flex flex-col items-center">
-              <FaWhatsapp size={34} className="text-blue-500 mb-4" />
-              <p className="text-gray-700 text-center text-xl whitespace-nowrap">
-                +55 (11) 1234-5678
-              </p>
-            </div>
+      <section id="contatos" className="bg-gray-100 py-16">
+  <div className="container mx-auto ">
+    <h2 className="text-4xl font-light text-center tracking-widest py-16">
+      Contatos:
+    </h2>
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 px-6 md:px-0">
+      {/* Contato 1 */}
+      <div className="flex flex-col items-center">
+        <FaWhatsapp size={34} className="text-blue-500 mb-4" />
+        <p className="text-gray-700 text-center text-lg whitespace-nowrap">
+          +55(11)1234-5678
+        </p>
+      </div>
 
-            {/* Ícone do Instagram */}
-            <div className="flex flex-col items-center">
-              <FaInstagram size={34} className="text-pink-500 mb-4" />
-              <p className="text-gray-700 text-center text-xl">
-                @minha_empresa
-              </p>
-            </div>
+      {/* Contato 2 */}
+      <div className="flex flex-col items-center">
+        <FaInstagram size={34} className="text-pink-500 mb-4" />
+        <p className="text-gray-700 text-center text-lg">
+          @minha_empresa
+        </p>
+      </div>
 
-            {/* Ícone do Telefone */}
-            <div className="flex flex-col items-center">
-              <IoMdPhonePortrait size={34} className="text-green-500 mb-4" />
-              <p className="text-gray-700 text-center text-xl whitespace-nowrap">
-                +55 (11) 9876-5432
-              </p>
-            </div>
+      {/* Contato 3 */}
+      <div className="flex flex-col items-center">
+        <IoMdPhonePortrait size={34} className="text-green-500 mb-4" />
+        <p className="text-gray-700 text-center text-lg whitespace-nowrap">
+          +55 (11) 9876-5432
+        </p>
+      </div>
 
-            {/* Ícone do E-mail */}
-            <div className="flex flex-col items-center">
-              <IoMdMail size={34} className="text-red-500 mb-4" />
-              <p className="text-gray-700 text-center text-xl">
-                contato@minhaempresa.com
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Contato 4 */}
+      <div className="flex flex-col items-center">
+        <IoMdMail size={34} className="text-red-500 mb-4" />
+        <p className="text-gray-700 text-center text-lg">
+          contato@minhaempresa.com
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
-      <footer className="bg-slate-700 py-14 px-8 text-white text-center">
+      <footer className="bg-slate-700 py-14 px-4 text-white text-center">
         <div className="container mx-auto flex flex-col md:flex-row md:justify-between">
           <div className="md:w-1/2">
             <p className="text-xl">
