@@ -132,11 +132,11 @@ function App() {
 
       <section
         id="servicos"
-        className="bg-[url('/src/assets/test4.jpg')] py-16 bg-auto"
+        className="bg-[url('/src/assets/test4.jpg')] py-20 bg-auto"
       >
         <div className="container mx-auto">
           <h2 className="font-medium text-4xl my-14 text-center text-gray-800 tracking-wide">
-            Serviços:
+          Nossos Serviços:
           </h2>
           <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
             {/* Card 1 */}
@@ -203,10 +203,10 @@ function App() {
         </div>
       </section>
 
-      <section id="galeria" className="py-16 bg-gray-100">
+      <section id="galeria" className="py-20 bg-gray-100">
   <div className="container mx-auto">
-    <h2 className="font-medium text-4xl mb-12 text-center text-gray-800 tracking-wide">
-      Galeria:
+    <h2 className="font-medium text-4xl mb-16 text-center text-gray-800 tracking-wide">
+    Transformação de Estofados (Antes e Depois)
     </h2>
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
       {/* Imagem 1 - Antes */}
