@@ -1,5 +1,11 @@
 import logo from "../src/assets/logo.jpg";
-import { FaWhatsapp, FaInstagram, FaPhone, FaEnvelope } from "react-icons/fa";
+import {
+  FaWhatsapp,
+  FaInstagram,
+  FaPhone,
+  FaEnvelope,
+  FaMapMarkerAlt,
+} from "react-icons/fa";
 // import { FiPhone, FiMail } from 'react-icons/fi';
 import { IoMdPhonePortrait, IoMdMail } from "react-icons/io";
 import { FaBars, FaTimes, FaHome, FaToolbox } from "react-icons/fa";
@@ -12,35 +18,41 @@ function App() {
     setIsOpen(!isOpen);
   };
 
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  const handleImageClick = (imageUrl) => {
+    setSelectedImage(imageUrl);
+  };
+
+  const closeModal = () => {
+    setSelectedImage(null);
+  };
+
   return (
     <>
       <main
         id="home"
-        className="relative bg-cover bg-bottom"
+        className="relative bg-cover bg-center"
         style={{
           backgroundImage: "url('/src/assets/test6.jpg')",
         }}
       >
-        <header className="fixed top-0 left-0 bg-slate-700 py-2 px-4 md:px-8 flex justify-between items-center w-full z-50">
-        <div className="flex items-center space-x-2 md:space-x-5">
-    <img
-      src={logo}
-      alt="Logo da Motta Clean"
-      className="w-12 h-12 rounded-full"
-    />
-    <div className="flex items-center space-x-2">
-      <div className="text-white font-light text-xl md:text-3xl tracking-widest">
-        Motta Clean
-      </div>
-      <div className="text-white text-lg">|</div>
-      <div className="text-white text-lg font-thin">PT-BR</div>
-      <img
-        src="/src/assets/pr-br.png"
-        alt="Bandeira"
-        className="w-6"
-      />
-    </div>
-  </div>
+        <header className="fixed top-0 left-0 bg-slate-800 py-2 px-4 md:px-8 flex justify-between items-center w-full z-50">
+          <div className="flex items-center space-x-2 md:space-x-5">
+            <img
+              src={logo}
+              alt="Logo da Motta Clean"
+              className="w-12 h-12 rounded-full"
+            />
+            <div className="flex items-center space-x-2">
+              <div className="text-white font-light text-xl md:text-3xl tracking-widest">
+                Motta Clean
+              </div>
+              <div className="text-white text-lg">|</div>
+              <div className="text-white text-lg font-thin">PT-BR</div>
+              <img src="/src/assets/pr-br.png" alt="Bandeira" className="w-6" />
+            </div>
+          </div>
 
           <div className="md:hidden">
             {isOpen ? (
@@ -95,6 +107,13 @@ function App() {
             <p className="text-white text-lg md:text-xl mt-4 leading-relaxed">
               Recupere o conforto e deixe seus estofados como novos!
             </p>
+            {/* Informação "Feira de Santana e Região - Bahia" adicionada abaixo */}
+            <div className="flex items-start justify-center space-x-1 mt-8 text-emerald-300 ">
+              <FaMapMarkerAlt size={14} />
+              <p className="text-base font-medium">
+                Atendemos Feira de Santana e Região - Bahia
+              </p>
+            </div>
           </div>
           <a
             href="#contatos"
@@ -149,11 +168,11 @@ function App() {
 
       <section
         id="servicos"
-        className="bg-[url('/src/assets/test6.jpg')] py-20 bg-auto"
+        className="bg-[url('/src/assets/test4.jpg')] py-20 bg-top"
       >
         <div className="container mx-auto">
           <h2 className="font-medium text-4xl my-14 text-center text-gray-800 tracking-wide">
-            Nossos Serviços:
+            Conheça Nossos Serviços:
           </h2>
           <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
             {/* Card 1 */}
@@ -225,7 +244,8 @@ function App() {
           <h2 className="font-medium text-4xl mb-16 text-center text-gray-800 tracking-wide">
             Transformação de Estofados (Antes e Depois)
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Item 1 */}
             <div className="relative rounded-lg overflow-hidden border-4 hover:border-l-sky-950">
               <img
                 src="/src/assets/su1.jpg"
@@ -237,6 +257,7 @@ function App() {
               </div>
             </div>
 
+            {/* Item 2 */}
             <div className="relative rounded-lg overflow-hidden border-4 hover:border-l-sky-950">
               <img
                 src="/src/assets/li1.jpg"
@@ -244,10 +265,13 @@ function App() {
                 className="w-full h-72 object-cover rounded-lg shadow-2xl transform transition-transform duration-300 scale-100 hover:scale-105"
               />
               <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black bg-opacity-30 rounded-lg hover:underline">
-                <span className="text-slate-100 text-2xl font-bold">Depois</span>
+                <span className="text-slate-100 text-2xl font-bold">
+                  Depois
+                </span>
               </div>
             </div>
 
+            {/* Item 3 */}
             <div className="relative rounded-lg overflow-hidden border-4 hover:border-l-sky-950">
               <img
                 src="/src/assets/su2.jpg"
@@ -255,9 +279,11 @@ function App() {
                 className="w-full h-72 object-cover rounded-lg shadow-2xl transform transition-transform duration-300 scale-100 hover:scale-105"
               />
               <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black bg-opacity-30 rounded-lg hover:underline">
-                <span className="text-slate-100 text-2xl  font-bold">Antes</span>
+                <span className="text-slate-100 text-2xl font-bold">Antes</span>
               </div>
             </div>
+
+            {/* Item 4 */}
             <div className="relative rounded-lg overflow-hidden border-4 hover:border-l-sky-950">
               <img
                 src="/src/assets/li2.jpg"
@@ -265,9 +291,13 @@ function App() {
                 className="w-full h-72 object-cover rounded-lg shadow-2xltransform transition-transform duration-300 scale-100 hover:scale-105"
               />
               <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black bg-opacity-30 rounded-lg hover:underline">
-                <span className="text-slate-100 text-2xl  font-bold">Depois</span>
+                <span className="text-slate-100 text-2xl font-bold">
+                  Depois
+                </span>
               </div>
             </div>
+
+            {/* Item 5 */}
             <div className="relative rounded-lg overflow-hidden border-4 hover:border-l-sky-950">
               <img
                 src="/src/assets/su3.jpg"
@@ -275,9 +305,11 @@ function App() {
                 className="w-full h-72 object-cover rounded-lg shadow-2xl transform transition-transform duration-300 scale-100 hover:scale-105"
               />
               <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black bg-opacity-30 rounded-lg hover:underline">
-                <span className="text-slate-100 text-2xl  font-bold">Antes</span>
+                <span className="text-slate-100 text-2xl font-bold">Antes</span>
               </div>
             </div>
+
+            {/* Item 6 */}
             <div className="relative rounded-lg overflow-hidden border-4 hover:border-l-sky-950">
               <img
                 src="/src/assets/li3.jpg"
@@ -285,13 +317,14 @@ function App() {
                 className="w-full h-72 object-cover rounded-lg shadow-2xl transform transition-transform duration-300 scale-100 hover:scale-105"
               />
               <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black bg-opacity-30 rounded-lg hover:underline">
-              <span className="text-slate-100 text-2xl font-bold hover:underline">Depois</span>
+                <span className="text-slate-100 text-2xl font-bold hover:underline">
+                  Depois
+                </span>
               </div>
             </div>
           </div>
         </div>
       </section>
-
       <section
         id="contatos"
         className="bg-gradient-to-r from-gray-700 via-gray-800 to-black py-8 md:py-16"
@@ -299,7 +332,7 @@ function App() {
         <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8 px-4 md:px-8">
           {/* Contato 1 */}
           <a
-            href="https://api.whatsapp.com/...link-do-seu-whatsapp..."
+            href="https://api.whatsapp.com/send?phone=5575997130700"
             target="_blank"
             rel="noopener noreferrer"
             className="flex flex-col items-center justify-center bg-white rounded-xl p-8 border border-gray-300 shadow-lg transform transition-all hover:scale-105 focus:scale-105 focus:outline-none"
