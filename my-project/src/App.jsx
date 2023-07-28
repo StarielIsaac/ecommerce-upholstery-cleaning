@@ -18,20 +18,29 @@ function App() {
         id="home"
         className="relative bg-cover bg-bottom"
         style={{
-          backgroundImage: "url('/src/assets/test5.jpg')",
+          backgroundImage: "url('/src/assets/test6.jpg')",
         }}
       >
         <header className="fixed top-0 left-0 bg-slate-700 py-2 px-4 md:px-8 flex justify-between items-center w-full z-50">
-          <div className="flex items-center space-x-2 md:space-x-5">
-            <img
-              src={logo}
-              alt="Logo da Motta Clean"
-              className="w-12 h-12 rounded-full"
-            />
-            <div className="text-white font-light text-xl md:text-3xl tracking-widest">
-              Motta Clean
-            </div>
-          </div>
+        <div className="flex items-center space-x-2 md:space-x-5">
+    <img
+      src={logo}
+      alt="Logo da Motta Clean"
+      className="w-12 h-12 rounded-full"
+    />
+    <div className="flex items-center space-x-2">
+      <div className="text-white font-light text-xl md:text-3xl tracking-widest">
+        Motta Clean
+      </div>
+      <div className="text-white text-lg">|</div>
+      <div className="text-white text-lg font-thin">PT-BR</div>
+      <img
+        src="/src/assets/pr-br.png"
+        alt="Bandeira"
+        className="w-6"
+      />
+    </div>
+  </div>
 
           <div className="md:hidden">
             {isOpen ? (
@@ -223,8 +232,8 @@ function App() {
                 alt="Imagem Antes da Limpeza"
                 className="w-full h-72 object-cover rounded-lg shadow-md transform transition-transform duration-300 scale-100 hover:scale-105"
               />
-              <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black bg-opacity-50 rounded-lg">
-                <span className="text-white text-2xl font-bold">Antes</span>
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black bg-opacity-30 rounded-lg hover:underline">
+                <span className="text-slate-100 text-2xl font-bold">Antes</span>
               </div>
             </div>
 
@@ -234,8 +243,8 @@ function App() {
                 alt="Imagem Depois da Limpeza"
                 className="w-full h-72 object-cover rounded-lg shadow-2xl transform transition-transform duration-300 scale-100 hover:scale-105"
               />
-              <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black bg-opacity-30 rounded-lg">
-                <span className="text-white text-2xl  font-bold">Depois</span>
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black bg-opacity-30 rounded-lg hover:underline">
+                <span className="text-slate-100 text-2xl font-bold">Depois</span>
               </div>
             </div>
 
@@ -245,8 +254,8 @@ function App() {
                 alt="Imagem Antes da Limpeza"
                 className="w-full h-72 object-cover rounded-lg shadow-2xl transform transition-transform duration-300 scale-100 hover:scale-105"
               />
-              <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black bg-opacity-30 rounded-lg">
-                <span className="text-white text-2xl  font-bold">Antes</span>
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black bg-opacity-30 rounded-lg hover:underline">
+                <span className="text-slate-100 text-2xl  font-bold">Antes</span>
               </div>
             </div>
             <div className="relative rounded-lg overflow-hidden border-4 hover:border-l-sky-950">
@@ -255,8 +264,8 @@ function App() {
                 alt="Imagem Depois da Limpeza"
                 className="w-full h-72 object-cover rounded-lg shadow-2xltransform transition-transform duration-300 scale-100 hover:scale-105"
               />
-              <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black bg-opacity-30 rounded-lg">
-                <span className="text-white text-2xl  font-bold">Depois</span>
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black bg-opacity-30 rounded-lg hover:underline">
+                <span className="text-slate-100 text-2xl  font-bold">Depois</span>
               </div>
             </div>
             <div className="relative rounded-lg overflow-hidden border-4 hover:border-l-sky-950">
@@ -265,8 +274,8 @@ function App() {
                 alt="Imagem Antes da Limpeza"
                 className="w-full h-72 object-cover rounded-lg shadow-2xl transform transition-transform duration-300 scale-100 hover:scale-105"
               />
-              <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black bg-opacity-30 rounded-lg">
-                <span className="text-white text-2xl  font-bold">Antes</span>
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black bg-opacity-30 rounded-lg hover:underline">
+                <span className="text-slate-100 text-2xl  font-bold">Antes</span>
               </div>
             </div>
             <div className="relative rounded-lg overflow-hidden border-4 hover:border-l-sky-950">
@@ -275,8 +284,8 @@ function App() {
                 alt="Imagem Depois da Limpeza"
                 className="w-full h-72 object-cover rounded-lg shadow-2xl transform transition-transform duration-300 scale-100 hover:scale-105"
               />
-              <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black bg-opacity-30 rounded-lg">
-                <span className="text-white text-2xl font-bold">Depois</span>
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black bg-opacity-30 rounded-lg hover:underline">
+              <span className="text-slate-100 text-2xl font-bold hover:underline">Depois</span>
               </div>
             </div>
           </div>
