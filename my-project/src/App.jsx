@@ -317,7 +317,7 @@ function App() {
       </section>
 
       <section
-        className="bg-cover bg-center scroll scroll py-64"
+        className="bg-cover bg-center scroll py-72"
         style={{
           backgroundImage: "url('/src/assets/arte.jpg')",
         }}
