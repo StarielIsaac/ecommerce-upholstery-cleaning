@@ -315,6 +315,16 @@ function App() {
           </div>
         </div>
       </section>
+
+      <section
+        className="bg-cover bg-center scroll scroll py-64"
+        style={{
+          backgroundImage: "url('/src/assets/arte.jpg')",
+        }}
+      >
+        <div className="container mx-auto"></div>
+      </section>
+
       <section
         id="contatos"
         className="bg-gradient-to-r from-gray-700 via-gray-800 to-black py-8 md:py-16"
