@@ -149,7 +149,7 @@ function App() {
 
       <section
         id="servicos"
-        className="bg-[url('/src/assets/test4.jpg')] py-20 bg-auto"
+        className="bg-[url('/src/assets/test6.jpg')] py-20 bg-auto"
       >
         <div className="container mx-auto">
           <h2 className="font-medium text-4xl my-14 text-center text-gray-800 tracking-wide">
