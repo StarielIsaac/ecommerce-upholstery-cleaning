@@ -18,16 +18,6 @@ function App() {
     setIsOpen(!isOpen);
   };
 
-  const [selectedImage, setSelectedImage] = useState(null);
-
-  const handleImageClick = (imageUrl) => {
-    setSelectedImage(imageUrl);
-  };
-
-  const closeModal = () => {
-    setSelectedImage(null);
-  };
-
   return (
     <>
       <main
