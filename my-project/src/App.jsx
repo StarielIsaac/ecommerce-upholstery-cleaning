@@ -1,4 +1,3 @@
-import logo from "../src/assets/logo.jpg";
 import {
   FaWhatsapp,
   FaInstagram,
@@ -22,15 +21,12 @@ function App() {
     <>
       <main
         id="home"
-        className="relative bg-cover bg-center"
-        style={{
-          backgroundImage: "url('/src/assets/test6.jpg')",
-        }}
-      >
+        className="relative bg-cover bg-center bg-[url('/assets/test6.jpg')]"
+      > 
         <header className="fixed top-0 left-0 bg-slate-800 py-2 px-4 md:px-8 flex justify-between items-center w-full z-50">
           <div className="flex items-center space-x-2 md:space-x-5">
             <img
-              src={logo}
+              src="/assets/logo.jpg"
               alt="Logo da Motta Clean"
               className="w-12 h-12 rounded-full"
             />
@@ -40,7 +36,7 @@ function App() {
               </div>
               <div className="text-white text-lg">|</div>
               <div className="text-white text-lg font-thin">PT-BR</div>
-              <img src="/src/assets/pr-br.png" alt="Bandeira" className="w-6" />
+              <img src="/assets/pr-br.png" alt="Bandeira" className="w-6" />
             </div>
           </div>
 
@@ -158,7 +154,7 @@ function App() {
 
       <section
         id="servicos"
-        className="bg-[url('/src/assets/test4.jpg')] py-20 bg-top"
+        className="bg-[url('/assets/test4.jpg')] py-20 bg-top"
       >
         <div className="container mx-auto">
           <h2 className="font-medium text-4xl my-14 text-center text-gray-800 tracking-wide">
@@ -238,7 +234,7 @@ function App() {
             {/* Item 1 */}
             <div className="relative rounded-lg overflow-hidden border-4 hover:border-l-sky-950">
               <img
-                src="/src/assets/su1.jpg"
+                src="/assets/su1.jpg"
                 alt="Imagem Antes da Limpeza"
                 className="w-full h-72 object-cover rounded-lg shadow-md transform transition-transform duration-300 scale-100 hover:scale-105"
               />
@@ -250,7 +246,7 @@ function App() {
             {/* Item 2 */}
             <div className="relative rounded-lg overflow-hidden border-4 hover:border-l-sky-950">
               <img
-                src="/src/assets/li1.jpg"
+                src="/assets/li1.jpg"
                 alt="Imagem Depois da Limpeza"
                 className="w-full h-72 object-cover rounded-lg shadow-2xl transform transition-transform duration-300 scale-100 hover:scale-105"
               />
@@ -264,7 +260,7 @@ function App() {
             {/* Item 3 */}
             <div className="relative rounded-lg overflow-hidden border-4 hover:border-l-sky-950">
               <img
-                src="/src/assets/su2.jpg"
+                src="/assets/su2.jpg"
                 alt="Imagem Antes da Limpeza"
                 className="w-full h-72 object-cover rounded-lg shadow-2xl transform transition-transform duration-300 scale-100 hover:scale-105"
               />
@@ -276,7 +272,7 @@ function App() {
             {/* Item 4 */}
             <div className="relative rounded-lg overflow-hidden border-4 hover:border-l-sky-950">
               <img
-                src="/src/assets/li2.jpg"
+                src="/assets/li2.jpg"
                 alt="Imagem Depois da Limpeza"
                 className="w-full h-72 object-cover rounded-lg shadow-2xltransform transition-transform duration-300 scale-100 hover:scale-105"
               />
@@ -290,7 +286,7 @@ function App() {
             {/* Item 5 */}
             <div className="relative rounded-lg overflow-hidden border-4 hover:border-l-sky-950">
               <img
-                src="/src/assets/su3.jpg"
+                src="/assets/su3.jpg"
                 alt="Imagem Antes da Limpeza"
                 className="w-full h-72 object-cover rounded-lg shadow-2xl transform transition-transform duration-300 scale-100 hover:scale-105"
               />
@@ -302,7 +298,7 @@ function App() {
             {/* Item 6 */}
             <div className="relative rounded-lg overflow-hidden border-4 hover:border-l-sky-950">
               <img
-                src="/src/assets/li3.jpg"
+                src="/assets/li3.jpg"
                 alt="Imagem Depois da Limpeza"
                 className="w-full h-72 object-cover rounded-lg shadow-2xl transform transition-transform duration-300 scale-100 hover:scale-105"
               />
@@ -317,10 +313,7 @@ function App() {
       </section>
 
       <section
-        className="bg-cover bg-center scroll py-72"
-        style={{
-          backgroundImage: "url('/src/assets/arte.jpg')",
-        }}
+        className="bg-cover bg-center scroll py-72 bg-[url('/assets/arte.jpg')]"
       >
         <div className="container mx-auto"></div>
       </section>
