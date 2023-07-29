@@ -36,7 +36,7 @@ function App() {
               </div>
               <div className="text-white text-lg">|</div>
               <div className="text-white text-lg font-thin">PT-BR</div>
-              <img src="/assets/pr-br.png" alt="Bandeira" className="w-6" />
+              <img src="/assets/flag.png" alt="Bandeira" className="w-6" />
             </div>
           </div>
 
