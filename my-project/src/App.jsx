@@ -21,8 +21,9 @@ function App() {
     <>
       <main
         id="home"
-        className="relative bg-cover bg-center bg-[url('/assets/test6.jpg')]"
-      > 
+        className="relative bg-cover bg-center"
+        style={{ backgroundImage: "url('/assets/test6.jpg')" }}
+      >
         <header className="fixed top-0 left-0 bg-slate-800 py-2 px-4 md:px-8 flex justify-between items-center w-full z-50">
           <div className="flex items-center space-x-2 md:space-x-5">
             <img
@@ -93,7 +94,6 @@ function App() {
             <p className="text-white text-lg md:text-xl mt-4 leading-relaxed">
               Recupere o conforto e deixe seus estofados como novos!
             </p>
-            {/* Informação "Feira de Santana e Região - Bahia" adicionada abaixo */}
             <div className="flex items-start justify-center space-x-1 mt-8 text-emerald-300 ">
               <FaMapMarkerAlt size={14} />
               <p className="text-base font-medium">
@@ -154,7 +154,7 @@ function App() {
 
       <section
         id="servicos"
-        className="bg-[url('/assets/test4.jpg')] py-20 bg-top"
+        className="bg-[url('/assets/test4.jpg')] py-20 bg-cover bg-center"
       >
         <div className="container mx-auto">
           <h2 className="font-medium text-4xl my-14 text-center text-gray-800 tracking-wide">
@@ -182,7 +182,7 @@ function App() {
                   <FaToolbox className="inline-block text-xl text-white" />
                 </span>
               </div>
-              <h3 className="text-xl  font-mono font-semibold  mb-4">
+              <h3 className="text-xl font-mono font-semibold mb-4">
                 Hipermeabilização
               </h3>
               <p className="text-gray-700 text-center">
@@ -274,7 +274,7 @@ function App() {
               <img
                 src="/assets/li2.jpg"
                 alt="Imagem Depois da Limpeza"
-                className="w-full h-72 object-cover rounded-lg shadow-2xltransform transition-transform duration-300 scale-100 hover:scale-105"
+                className="w-full h-72 object-cover rounded-lg shadow-2xl transform transition-transform duration-300 scale-100 hover:scale-105"
               />
               <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity bg-black bg-opacity-30 rounded-lg hover:underline">
                 <span className="text-slate-100 text-2xl font-bold">
@@ -312,9 +312,7 @@ function App() {
         </div>
       </section>
 
-      <section
-        className="bg-cover bg-center scroll py-72 bg-[url('/assets/arte.jpg')]"
-      >
+      <section className="bg-cover bg-center scroll py-72 bg-[url('/assets/arte.jpg')]">
         <div className="container mx-auto"></div>
       </section>
 
@@ -416,9 +414,9 @@ function App() {
                 <FaWhatsapp
                   size={26}
                   className="text-white hover:text-gray-300"
+                  aria-label="Contato via WhatsApp"
                 />
               </a>
-
               <a
                 href="https://www.instagram.com/motta_clean/"
                 target="_blank"
@@ -427,17 +425,16 @@ function App() {
                 <FaInstagram
                   size={26}
                   className="text-white hover:text-gray-300"
+                  aria-label="Siga-nos no Instagram"
                 />
               </a>
-
-              <a
-                href="tel:+5575997130700"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaPhone size={26} className="text-white hover:text-gray-300" />
+              <a href="tel:+5575997130700">
+                <FaPhone
+                  size={26}
+                  className="text-white hover:text-gray-300"
+                  aria-label="Central de Atendimento"
+                />
               </a>
-
               <a
                 href="mailto:Dinhofilho.mota@gmail.com"
                 target="_blank"
@@ -446,6 +443,7 @@ function App() {
                 <FaEnvelope
                   size={26}
                   className="text-white hover:text-gray-300"
+                  aria-label="Envie-nos um e-mail"
                 />
               </a>
             </div>
