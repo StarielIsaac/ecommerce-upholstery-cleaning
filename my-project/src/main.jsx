@@ -9,8 +9,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Router>
       <Routes> {/* Use o componente Routes aqui */}
-        <Route path="/sitemap.xml" element={<Sitemap />} />
-        <Route path="/" element={<App />} />
+        <Route path="https://www.mottaclean.com.br/sitemap.xml" element={<Sitemap /> } exact />
+        <Route path="https://www.mottaclean.com.br/" element={<App />} /> 
       </Routes>
     </Router>
   </React.StrictMode> 
